@@ -18,7 +18,7 @@ class CreateCustomersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('phone')->unique();
-            $table->string('type')->unique();
+            $table->string('type');
             $table->string('prof_pic')->nullable();
             $table->string('active')->nullable();
             $table->string('balance')->nullable();
@@ -27,7 +27,6 @@ class CreateCustomersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-
             $table->timestamps();
         });
     }

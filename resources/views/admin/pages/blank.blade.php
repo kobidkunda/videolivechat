@@ -35,7 +35,7 @@
         <div class="card-body">
 
 
-            <table class="table table-striped table-bordered" id="product-table" style="width: 100%">
+            <table class="table table-striped table-bordered table-responsive" id="product-table" style="width: 100%">
                 <thead class="thead-dark">
                 <tr>
                     <th>ID</th>
@@ -49,7 +49,8 @@
                     <th>ACTIVE</th>
                     <th>BALANCE</th>
                     <th>ACTION</th>
-                   
+                    
+
                 </tr>
                 </thead>
             </table>
@@ -62,7 +63,7 @@
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
-          Export
+          <a href="{{ route('admin.customer.add') }}" class="btn btn-primary btn-primary">Add User</a>
         </div>
         <!-- /.card-footer-->
       </div>
@@ -94,7 +95,6 @@
                 { data: 'active', name: 'active' },
                 { data: 'balance', name: 'balance' },
                 {data: 'action', name: 'action', orderable: false, searchable: false},
-
 
 
 

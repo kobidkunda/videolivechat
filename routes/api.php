@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ManageCustomer;
 use App\Http\Controllers\AuthUser\Customer\LoginApi;
 use App\Http\Controllers\Customer\CustomerDetails;
 use Illuminate\Http\Request;
@@ -25,3 +26,6 @@ Route::post('/auth/customer', [LoginApi::class, 'LoginRequest']);
 
 Route::middleware('auth:sanctum')->get('/customer/profile', [CustomerDetails::class, 'GetProfile']);
 
+
+Route::post('/admins/customer/add/profile',
+[ManageCustomer::class, 'UploadProfile'])->name('admin.customer.add.profile.save');
